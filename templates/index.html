@@ -1,0 +1,86 @@
+<!-- copy pasted bootstrad version 4 ko starter template.
+    We used version 4 cause that's simpler, easy use -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <!-- afnai css -->
+  <style>
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .container {
+      width: 100%;
+      height: 200px;
+      border: 5px solid red;
+      margin-top: 40px;
+      padding-top: 10px;
+      display: block;
+      text-align: center;
+    }
+
+    .form-group {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  </style>
+
+  <title>PDFxAashraP-Your favorite PDF merger webapp</title>
+
+</head>
+
+<body>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+
+    <h1>PDFxAashraP</h1>
+
+  <!-- file input wala form -->
+  <h1>Your favorite PDF merger tool</h1>
+  <div class="container">
+    <form method="post" action="/merge" enctype="multipart/form-data">
+      <!-- server lai form pathauna method post haaru gareko.get ra post method huncha ni -->
+      <!-- we do this: enctype="multipart/form-data" when we have to send files to server -->
+      <div class="form-group">
+        <label for="exampleFormControlFile1" style="font-family: Georgia, 'Times New Roman', Times, serif">Kindly upload
+          the pdf files you want to merge</label>
+        <input type="file" name="pdfs" class="form-control-file" id="exampleFormControlFile1" multiple="multiple" accept=".pdf" />
+        <!-- 
+          In HTML5 you can add the multiple attribute to select more than 1 file.
+          <input type="file" name="filefield" multiple="multiple"> -->
+          <!-- accept=".pdf" rakheko to accept only pdf files -->
+
+          <!-- name="pdfs chai server ma multer use gari post garna laii" -->
+
+        <!-- for submit button, my-4 is margin on y-axis=4 -->
+        <button type="submit" class="btn btn-info my-4">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
